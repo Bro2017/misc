@@ -1,0 +1,18 @@
+主要参考这2个
+https://www.itcodemonkey.com/article/10251.html
+http://unclechen.github.io/2016/12/11/python%E5%88%A9%E7%94%A8beautifulsoup+selenium%E8%87%AA%E5%8A%A8%E7%BF%BB%E9%A1%B5%E6%8A%93%E5%8F%96%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9/
+另外可能的不改变链接进行爬虫的方法
+https://blog.csdn.net/weixin_42551465/article/details/80817552 
+https://blog.csdn.net/c350577169/article/details/80410133
+遇到的问题：
+https://stackoverflow.com/questions/11908249/debugging-element-is-not-clickable-at-point-error
+https://www.runoob.com/python/python-exceptions.html
+爬取目标
+https://radar.qrator.net/as4538/prefixes#startDate=2019-09-19&endDate=2019-12-19&tab=current
+还试着用了 按键精灵，这个下一页翻页不是按钮https://blog.csdn.net/yuke07029306/article/details/80815249
+而是一个<a>类型的标签https://blog.csdn.net/qq_32322613/article/details/78344463
+最后发现一个捷径方法：
+在点击下一页时，开发者工具中看Network这一项，发现XHR类型：
+https://radar.qrator.net/api/new-prefixes/ipv4/4538/current?firstseen=1568851200&lastseen=1576713600&lookup=&page=500
+修改page即可获取不同页面的信息
+可以爬取这个页面来进行获取信息较为简单，数据格式本身较为规整，无需在HTML页面中寻找。
