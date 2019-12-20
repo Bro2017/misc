@@ -16,3 +16,14 @@ https://radar.qrator.net/as4538/prefixes#startDate=2019-09-19&endDate=2019-12-19
 https://radar.qrator.net/api/new-prefixes/ipv4/4538/current?firstseen=1568851200&lastseen=1576713600&lookup=&page=500
 修改page即可获取不同页面的信息
 可以爬取这个页面来进行获取信息较为简单，数据格式本身较为规整，无需在HTML页面中寻找。
+
+捷径方法折腾：
+发现问题：捷径方法的这个地址可能有反爬虫，过一段时间，爬取一定数量页面之后，就会失败，即使程序是try...Exception..else..因为更新时间是固定的，不再能够访问该地址
+另外，类型转换折腾一上午。http://funhacks.net/2016/04/24/python_%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8/
+经过同学提醒，bgpview.io，有API，curl https://api.bgpview.io/asn/4538/prefixes 问题是：需要清洗数据
+
+写出完美的爬虫程序还是挺难的
+反爬虫机制：
+http://blog.itpub.net/31555707/viewspace-2637809/爬虫流量很大？？？占到网络中很多么？
+
+
